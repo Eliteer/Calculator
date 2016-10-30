@@ -1,0 +1,11 @@
+package calculator;
+
+public interface CalcState {
+	public void numberInput(String num);
+	public void operatorInput(String op);
+	public double binaryOp(String op, double v1, double v2);
+	public void unaryOp(String op);
+	public void equals(boolean changeState);
+	public void clear(boolean clearAll);
+	public void backspace();
+}

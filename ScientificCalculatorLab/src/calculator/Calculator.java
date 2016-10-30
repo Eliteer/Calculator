@@ -47,10 +47,12 @@ public class Calculator extends Application {
 		gridPane.setPadding(new Insets(0, 0, 
 					    0,0));
 		
+		
+		
 		Button one = new Button("1");
 		one.setPrefHeight(100);
 		one.setPrefWidth(100);
-		gridPane.add(one,0,0);
+		gridPane.add(one,1,0);
 		one.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		one.setOnAction(e -> {
 			currentState.numberInput("1");
@@ -59,7 +61,7 @@ public class Calculator extends Application {
 		Button two = new Button("2");
 		two.setPrefHeight(100);
 		two.setPrefWidth(100);
-		gridPane.add(two,1,0);
+		gridPane.add(two,2,0);
 		two.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		two.setOnAction(e -> {
 			currentState.numberInput("2");
@@ -68,7 +70,7 @@ public class Calculator extends Application {
 		Button three = new Button("3");
 		three.setPrefHeight(100);
 		three.setPrefWidth(100);
-		gridPane.add(three,2,0);
+		gridPane.add(three,3,0);
 		three.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		three.setOnAction(e -> {
 			currentState.numberInput("3");
@@ -77,7 +79,7 @@ public class Calculator extends Application {
 		Button four = new Button("4");
 		four.setPrefHeight(100);
 		four.setPrefWidth(100);
-		gridPane.add(four,0,1);
+		gridPane.add(four,1,1);
 		four.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		four.setOnAction(e -> {
 			currentState.numberInput("4");
@@ -86,7 +88,7 @@ public class Calculator extends Application {
 		Button five = new Button("5");
 		five.setPrefHeight(100);
 		five.setPrefWidth(100);
-		gridPane.add(five,1,1);
+		gridPane.add(five,2,1);
 		five.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		five.setOnAction(e -> {
 			currentState.numberInput("5");
@@ -95,7 +97,7 @@ public class Calculator extends Application {
 		Button six = new Button("6");
 		six.setPrefHeight(100);
 		six.setPrefWidth(100);
-		gridPane.add(six,2,1);
+		gridPane.add(six,3,1);
 		six.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		six.setOnAction(e -> {
 			currentState.numberInput("6");
@@ -104,7 +106,7 @@ public class Calculator extends Application {
 		Button seven = new Button("7");
 		seven.setPrefHeight(100);
 		seven.setPrefWidth(100);
-		gridPane.add(seven,0,2);
+		gridPane.add(seven,1,2);
 		seven.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		seven.setOnAction(e -> {
 			currentState.numberInput("7");
@@ -113,7 +115,7 @@ public class Calculator extends Application {
 		Button eight = new Button("8");
 		eight.setPrefHeight(100);
 		eight.setPrefWidth(100);
-		gridPane.add(eight,1,2);
+		gridPane.add(eight,2,2);
 		eight.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		eight.setOnAction(e -> {
 			currentState.numberInput("8");
@@ -122,7 +124,7 @@ public class Calculator extends Application {
 		Button nine = new Button("9");
 		nine.setPrefHeight(100);
 		nine.setPrefWidth(100);
-		gridPane.add(nine,2,2);
+		gridPane.add(nine,3,2);
 		nine.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		nine.setOnAction(e -> {
 			currentState.numberInput("9");
@@ -131,7 +133,7 @@ public class Calculator extends Application {
 		Button zero = new Button("0");
 		zero.setPrefHeight(100);
 		zero.setPrefWidth(100);
-		gridPane.add(zero,1,3);
+		gridPane.add(zero,2,3);
 		zero.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		zero.setOnAction(e -> {
 			currentState.numberInput("0");
@@ -140,7 +142,7 @@ public class Calculator extends Application {
 		Button equals = new Button("=");
 		equals.setPrefHeight(100);
 		equals.setPrefWidth(100);
-		gridPane.add(equals,2,3);
+		gridPane.add(equals,3,3);
 		equals.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		equals.setOnAction(e -> {
 			currentState.equals(true);
@@ -149,7 +151,7 @@ public class Calculator extends Application {
 		Button dec = new Button(".");
 		dec.setPrefHeight(100);
 		dec.setPrefWidth(100);
-		gridPane.add(dec,0,3);
+		gridPane.add(dec,1,3);
 		dec.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		dec.setOnAction(e -> {
 			currentState.numberInput(".");
@@ -158,7 +160,7 @@ public class Calculator extends Application {
 		Button back = new Button("<--");
 		back.setPrefHeight(100);
 		back.setPrefWidth(100);
-		gridPane.add(back,4,0);
+		gridPane.add(back,5,0);
 		back.setStyle("-fx-font: 25 arial; -fx-base: #0b50a0;");
 		back.setOnAction(e -> {
 			currentState.backspace();
@@ -167,7 +169,7 @@ public class Calculator extends Application {
 		Button psms = new Button("+/-");
 		psms.setPrefHeight(100);
 		psms.setPrefWidth(100);
-		gridPane.add(psms,3,0);
+		gridPane.add(psms,4,0);
 		psms.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		psms.setOnAction(e -> {
 			currentState.unaryOp("+/-");
@@ -176,7 +178,7 @@ public class Calculator extends Application {
 		Button c = new Button("C");
 		c.setPrefHeight(200);
 		c.setPrefWidth(100);
-		gridPane.add(c,5,2,1,2);
+		gridPane.add(c,6,2,1,2);
 		c.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		c.setOnAction(e -> {
 			currentState.clear(true);
@@ -185,7 +187,7 @@ public class Calculator extends Application {
 		Button ce = new Button("CE");
 		ce.setPrefHeight(200);
 		ce.setPrefWidth(100);
-		gridPane.add(ce,5,0,1,2);
+		gridPane.add(ce,6,0,1,2);
 		ce.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		ce.setOnAction(e -> {
 			currentState.clear(false);
@@ -194,7 +196,7 @@ public class Calculator extends Application {
 		Button plus = new Button("+");
 		plus.setPrefHeight(100);
 		plus.setPrefWidth(100);
-		gridPane.add(plus,3,1);
+		gridPane.add(plus,4,1);
 		plus.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		plus.setOnAction(e -> {
 			currentState.operatorInput("+");
@@ -203,7 +205,7 @@ public class Calculator extends Application {
 		Button minus = new Button("-");
 		minus.setPrefHeight(100);
 		minus.setPrefWidth(100);
-		gridPane.add(minus,4,1);
+		gridPane.add(minus,5,1);
 		minus.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		minus.setOnAction(e -> {
 			currentState.operatorInput("-");
@@ -212,7 +214,7 @@ public class Calculator extends Application {
 		Button mult = new Button("*");
 		mult.setPrefHeight(100);
 		mult.setPrefWidth(100);
-		gridPane.add(mult,3,2);
+		gridPane.add(mult,4,2);
 		mult.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		mult.setOnAction(e -> {
 			currentState.operatorInput("*");
@@ -221,7 +223,7 @@ public class Calculator extends Application {
 		Button div = new Button("/");
 		div.setPrefHeight(100);
 		div.setPrefWidth(100);
-		gridPane.add(div,4,2);
+		gridPane.add(div,5,2);
 		div.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		div.setOnAction(e -> {
 			currentState.operatorInput("/");
@@ -230,7 +232,7 @@ public class Calculator extends Application {
 		Button inv = new Button("1/x");
 		inv.setPrefHeight(100);
 		inv.setPrefWidth(100);
-		gridPane.add(inv,3,3);
+		gridPane.add(inv,4,3);
 		inv.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		inv.setOnAction(e -> {
 			currentState.unaryOp("1/x");
@@ -239,10 +241,28 @@ public class Calculator extends Application {
 		Button sqrt = new Button("√");
 		sqrt.setPrefHeight(100);
 		sqrt.setPrefWidth(100);
-		gridPane.add(sqrt,4,3);
+		gridPane.add(sqrt,5,3);
 		sqrt.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
 		sqrt.setOnAction(e -> {
 			currentState.unaryOp("^.5");
+		});
+		
+		Button pi = new Button("π");
+		pi.setPrefHeight(100);
+		pi.setPrefWidth(100);
+		gridPane.add(pi,0,0);
+		pi.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		pi.setOnAction(e -> {
+			currentState.unaryOp("pi");
+		});
+		
+		Button pi = new Button("π");
+		pi.setPrefHeight(100);
+		pi.setPrefWidth(100);
+		gridPane.add(pi,0,0);
+		pi.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		pi.setOnAction(e -> {
+			currentState.unaryOp("pi");
 		});
 		
 		BorderPane bp = new BorderPane();
@@ -280,14 +300,17 @@ public class Calculator extends Application {
 		}
 		return numDec;
 	}
+	
+	
 	public class RFO implements CalcState{
+		
 		public void numberInput(String num){
 			if(temp.length() < 10){
 				if(num.equals(".") && numDecimals(temp) == 1){
 					displayField.setText("ERR");
 					currentState = err;
 					return;
-				}else temp += num;
+				} else temp += num;
 				if(temp.equals(".")){
 					tempDouble = 0.0;
 				}else tempDouble = Double.parseDouble(temp);
@@ -298,7 +321,7 @@ public class Calculator extends Application {
 		public void operatorInput(String oper){
 			if(!temp.equals("") || contOper){
 				op = oper;
-				var1 = tempDouble;
+				var1 = tempDouble;	
 				var2 = 0;
 				temp = "";
 				tempDouble = 0.0;
@@ -363,6 +386,7 @@ public class Calculator extends Application {
 	}
 	
 	public class RSO implements CalcState{
+		
 		public void numberInput(String num){
 			if(temp.length() < 10){
 				if(num.equals(".") && numDecimals(temp) == 1){
@@ -476,7 +500,7 @@ public class Calculator extends Application {
 		public void numberInput(String num){
 			
 		}
-		
+	
 		public void operatorInput(String oper){
 			
 		}
