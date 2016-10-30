@@ -32,7 +32,7 @@ public class Calculator extends Application {
 	}
 	
 	public void start(Stage primaryStage){
-		int sceneHeight = 550, sceneWidth = 550;
+		int sceneHeight = 650, sceneWidth = 550;
 		displayField = new TextField();
 		displayField.setEditable(false);
 		displayField.setPrefHeight(162);
@@ -186,7 +186,7 @@ public class Calculator extends Application {
 		ce.setPrefHeight(100);
 		ce.setPrefWidth(100);
 		gridPane.add(ce,6,0);
-		ce.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		ce.setStyle("-fx-font: 28 arial; -fx-base: #0b50a0;");
 		ce.setOnAction(e -> {
 			currentState.clear(false);
 		});
@@ -204,7 +204,7 @@ public class Calculator extends Application {
 		power.setPrefHeight(100);
 		power.setPrefWidth(100);
 		gridPane.add(power, 6, 2);
-		power.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		power.setStyle("-fx-font: 28 arial; -fx-base: #0b50a0;");
 		power.setOnAction(e -> {
 			throw new UnsupportedOperationException("Write a method for power function");
 		});
@@ -213,7 +213,7 @@ public class Calculator extends Application {
 		factorial.setPrefHeight(100);
 		power.setPrefWidth(100);
 		gridPane.add(factorial, 6, 3);
-		factorial.setStyle("-fx-font: 39 arial; -fx-base: #0b50a0;");
+		factorial.setStyle("-fx-font: 33 arial; -fx-base: #0b50a0;");
 		factorial.setOnAction(e -> {
 			throw new UnsupportedOperationException("Write a method for factorial function");
 		});
@@ -254,11 +254,47 @@ public class Calculator extends Application {
 			currentState.operatorInput("/");
 		});
 		
+		Button euler = new Button("e");
+		euler.setPrefHeight(100);
+		euler.setPrefWidth(100);
+		gridPane.add(euler, 0, 1);
+		euler.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		euler.setOnAction(e -> {
+			throw new UnsupportedOperationException("Implement euler's constant");
+		});
+		
+		Button sin = new Button("sin");
+		sin.setPrefHeight(100);
+		sin.setPrefWidth(100);
+		gridPane.add(sin, 0, 2);
+		sin.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		sin.setOnAction(e -> {
+			throw new UnsupportedOperationException("Implement Sine function");
+		});
+		
+		Button cos = new Button("cos");
+		cos.setPrefHeight(100);
+		cos.setPrefWidth(100);
+		gridPane.add(cos, 0, 3);
+		cos.setStyle("-fx-font: 26 arial; -fx-base: #0b50a0;");
+		cos.setOnAction(e -> {
+			throw new UnsupportedOperationException("Implement Cosine function");
+		});
+		
+		Button tan = new Button("tan");
+		tan.setPrefHeight(100);
+		tan.setPrefWidth(100);
+		gridPane.add(tan, 0, 4);
+		tan.setStyle("-fx-font: 26 arial; -fx-base: #0b50a0;");
+		tan.setOnAction(e -> {
+			throw new UnsupportedOperationException("Implement Tan function");
+		});
+		
 		Button inv = new Button("1/x");
 		inv.setPrefHeight(100);
 		inv.setPrefWidth(100);
 		gridPane.add(inv,4,3);
-		inv.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		inv.setStyle("-fx-font: 28 arial; -fx-base: #0b50a0;");
 		inv.setOnAction(e -> {
 			currentState.unaryOp("1/x");
 		});
