@@ -308,6 +308,16 @@ public class Calculator extends Application {
 			currentState.unaryOp("^.5");
 		});
 		
+		final ComboBox<String> memoryCombBox = new ComboBox<String>();
+		memoryCombBox.setPrefHeight(100);
+		memoryCombBox.setPrefWidth(200);
+		memoryCombBox.setValue("Memory");
+		memoryCombBox.getItems().addAll(
+				"Memory Store",
+				"Memory Retrieve"
+				);
+		memoryCombBox.setStyle("-fx-font: 20 arial; -fx-base: #0b50a0;");
+		gridPane.add(memoryCombBox, 1, 4, 2, 1);
 		
 		BorderPane bp = new BorderPane();
 		bp.setTop(displayField);
