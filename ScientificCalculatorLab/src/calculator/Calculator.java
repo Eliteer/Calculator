@@ -1,8 +1,8 @@
 package calculator;
 
-/* This amazing project brought to you by Dylan Fox,
- * Atharva Baht, and Rachel Walker. 
- */
+import java.io.File;
+
+/* Dylan Fox, Atharva Baht, Rachel Walker, Nelson Le, and Camilo Carvo*/
 
 import javafx.application.*;
 import javafx.scene.*;
@@ -10,6 +10,8 @@ import javafx.scene.control.*;
 import javafx.stage.*;
 import javafx.scene.layout.*;
 import javafx.geometry.*;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 @SuppressWarnings("restriction")
 public class Calculator extends Application {
@@ -37,6 +39,7 @@ public class Calculator extends Application {
 		displayField.setEditable(false);
 		displayField.setPrefHeight(162);
 		displayField.setPrefWidth(sceneWidth);
+		displayField.setText("Hi Ladan :)");
 		displayField.setStyle("-fx-font: 60 arial; -fx-control-inner-background: #46abd6; -fx-text-fill: white;"
 				+ "-fx-alignment: center-right");
 
@@ -46,6 +49,7 @@ public class Calculator extends Application {
 		gridPane.setVgap(0);
 		gridPane.setPadding(new Insets(0, 0, 
 					    0,0));
+		gridPane.setStyle("-fx-background-color: #356aa3");
 		
 		Button pi = new Button("π");
 		pi.setPrefHeight(100);
@@ -60,7 +64,7 @@ public class Calculator extends Application {
 		one.setPrefHeight(100);
 		one.setPrefWidth(100);
 		gridPane.add(one,1,0);
-		one.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		one.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		one.setOnAction(e -> {
 			currentState.numberInput("1");
 		});
@@ -69,7 +73,7 @@ public class Calculator extends Application {
 		two.setPrefHeight(100);
 		two.setPrefWidth(100);
 		gridPane.add(two,2,0);
-		two.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		two.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		two.setOnAction(e -> {
 			currentState.numberInput("2");
 		});
@@ -78,7 +82,7 @@ public class Calculator extends Application {
 		three.setPrefHeight(100);
 		three.setPrefWidth(100);
 		gridPane.add(three,3,0);
-		three.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		three.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		three.setOnAction(e -> {
 			currentState.numberInput("3");
 		});
@@ -87,7 +91,7 @@ public class Calculator extends Application {
 		four.setPrefHeight(100);
 		four.setPrefWidth(100);
 		gridPane.add(four,1,1);
-		four.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		four.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		four.setOnAction(e -> {
 			currentState.numberInput("4");
 		});
@@ -96,7 +100,7 @@ public class Calculator extends Application {
 		five.setPrefHeight(100);
 		five.setPrefWidth(100);
 		gridPane.add(five,2,1);
-		five.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		five.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		five.setOnAction(e -> {
 			currentState.numberInput("5");
 		});
@@ -105,7 +109,7 @@ public class Calculator extends Application {
 		six.setPrefHeight(100);
 		six.setPrefWidth(100);
 		gridPane.add(six,3,1);
-		six.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		six.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		six.setOnAction(e -> {
 			currentState.numberInput("6");
 		});
@@ -114,7 +118,7 @@ public class Calculator extends Application {
 		seven.setPrefHeight(100);
 		seven.setPrefWidth(100);
 		gridPane.add(seven,1,2);
-		seven.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		seven.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		seven.setOnAction(e -> {
 			currentState.numberInput("7");
 		});
@@ -123,7 +127,7 @@ public class Calculator extends Application {
 		eight.setPrefHeight(100);
 		eight.setPrefWidth(100);
 		gridPane.add(eight,2,2);
-		eight.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		eight.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		eight.setOnAction(e -> {
 			currentState.numberInput("8");
 		});
@@ -132,7 +136,7 @@ public class Calculator extends Application {
 		nine.setPrefHeight(100);
 		nine.setPrefWidth(100);
 		gridPane.add(nine,3,2);
-		nine.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		nine.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		nine.setOnAction(e -> {
 			currentState.numberInput("9");
 		});
@@ -141,7 +145,7 @@ public class Calculator extends Application {
 		zero.setPrefHeight(100);
 		zero.setPrefWidth(100);
 		gridPane.add(zero,2,3);
-		zero.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		zero.setStyle("-fx-font: 30 arial; -fx-base: #d0dcef;");
 		zero.setOnAction(e -> {
 			currentState.numberInput("0");
 		});
@@ -209,11 +213,11 @@ public class Calculator extends Application {
 			throw new UnsupportedOperationException("Write a method for power function");
 		});
 		
-		Button factorial = new Button("x! ");
+		Button factorial = new Button("X! ");
 		factorial.setPrefHeight(100);
 		power.setPrefWidth(100);
 		gridPane.add(factorial, 6, 3);
-		factorial.setStyle("-fx-font: 33 arial; -fx-base: #0b50a0;");
+		factorial.setStyle("-fx-font: 31 arial; -fx-base: #0b50a0;");
 		factorial.setOnAction(e -> {
 			throw new UnsupportedOperationException("Write a method for factorial function");
 		});
@@ -310,14 +314,45 @@ public class Calculator extends Application {
 		
 		final ComboBox<String> memoryCombBox = new ComboBox<String>();
 		memoryCombBox.setPrefHeight(100);
-		memoryCombBox.setPrefWidth(200);
-		memoryCombBox.setValue("Memory");
+		memoryCombBox.setPrefWidth(300);
+		memoryCombBox.setValue("Memory Operations");
 		memoryCombBox.getItems().addAll(
 				"Memory Store",
 				"Memory Retrieve"
 				);
-		memoryCombBox.setStyle("-fx-font: 20 arial; -fx-base: #0b50a0;");
-		gridPane.add(memoryCombBox, 1, 4, 2, 1);
+		memoryCombBox.setStyle("-fx-font: 18 arial; -fx-base: #0b50a0;");
+		gridPane.add(memoryCombBox, 1, 4, 3, 1);
+		
+		final ToggleGroup radioGroup = new ToggleGroup();
+		RadioButton radianButton = new RadioButton("Radians");
+		RadioButton degreeButton = new RadioButton("Degrees");
+		radianButton.setPrefHeight(100);
+		radianButton.setPrefWidth(100);
+		degreeButton.setPrefHeight(100);
+		degreeButton.setPrefWidth(100);
+		radianButton.setStyle("-fx-font: 14 arial; -fx-text-fill: white;");
+		degreeButton.setStyle("-fx-font: 14 arial; -fx-text-fill: white;");
+		radianButton.setOnAction(e -> {
+			throw new UnsupportedOperationException("Implement toggle Radians");
+		});
+		degreeButton.setOnAction(e -> {
+			throw new UnsupportedOperationException("Implement toggle Degrees");
+		});
+		radianButton.setToggleGroup(radioGroup);
+		degreeButton.setToggleGroup(radioGroup);
+		gridPane.add(radianButton, 5, 4);
+		gridPane.add(degreeButton, 6, 4);
+		
+		Button musicButton = new Button("♫");
+		musicButton.setPrefHeight(100);
+		musicButton.setPrefWidth(100);
+		musicButton.setStyle("-fx-font: 30 arial; -fx-base: #0b50a0;");
+		musicButton.setOnAction(e -> {
+			Media song = new Media(new File("Song.mp3").toURI().toString());
+			MediaPlayer mediaPlayer = new MediaPlayer(song);
+			mediaPlayer.play();
+		});
+		gridPane.add(musicButton, 4, 4);
 		
 		BorderPane bp = new BorderPane();
 		bp.setTop(displayField);
